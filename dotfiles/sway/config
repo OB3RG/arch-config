@@ -214,7 +214,7 @@ bindsym $mod+r mode "resize"
 bar {
     status_command  i3status 
     position top
-        font  Monaco,Bold 11px
+        font OpenDyslexicNerdFont,Regular 11px
 	separator_symbol "   "
 	mode dock
    
