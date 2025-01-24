@@ -212,17 +212,29 @@ bindsym $mod+r mode "resize"
 #
 # Read `man 5 sway-bar` for more information about this section.
 bar {
+    status_command  i3status 
     position top
-
-    # When the status_command prints a new line to stdout, swaybar updates.
-    # The default just shows the current date and time.
-    status_command while date +'%Y-%m-%d %X'; do sleep 1; done
-
+        font  Monaco,Bold 11px
+	separator_symbol "   "
+	mode dock
+   
     colors {
-        statusline #ffffff
-        background #323232
-        inactive_workspace #32323200 #32323200 #5c5c5c
-    }
+        statusline   #78da59
+        #statusline #62AEEE 
+        #background #585858
+        background #332f2e
+	#separator #ffff00
+	separator #fff32e
+				#border 	#bg		#txt
+        focused_workspace	#332f2e	#332f2e	#ffba08
+        #inactive_workspace	#332f2e	#585858	 #cde4e6
+        inactive_workspace	#332f2e	#332f2e	 #cde4e6
+	active_workspace	#777F8B	#777F8B	#cde4e6
+    	urgent_workspace	#DEDFE3	#DEDFE3	#767E8A   
+
+
+
+   }
 }
 
 input "type:keyboard" {
