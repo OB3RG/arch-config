@@ -20,3 +20,10 @@ A small summary:
 11. chmod +x install-uefi.sh
 12. run with ./install-uefi.sh
 
+
+
+## Post install 
+
+### To enable gnome keyring
+1. systemctl --user enable gnome-keyring.service
+2. systemctl --user enable gcr-ssh-agent.socket
