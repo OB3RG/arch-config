@@ -2,17 +2,18 @@
 
 if [ -z "$HOME" ]; then echo "Seems you're \$HOMEless :("; exit 1; fi
 
+DOTFILES_ROOT=$HOME/.arch-config
 DOTCONFIG=$HOME/.config
 DOTFILES=$HOME/.arch-config/dotfiles
 
 GITCLONE="git clone --depth=1"
 
 cd "$HOME" || exit
-rm -rf "$DOTFILES"
-mkdir "$DOTFILES"
-cd "$DOTFILES" || exit
+rm -rf "$DOTFILES_ROOT"
+mkdir "$DOTFILES_ROOT"
+cd "$DOTFILES_ROOT" || exit
 
-git clone git@github.com:OB3RG/arch-config.git $DOTFILES
+git clone git@github.com:OB3RG/arch-config.git $DOTFILES_ROOT
 
 rm -rf \
   "$HOME/.gitconfig" \
