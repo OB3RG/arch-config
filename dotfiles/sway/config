@@ -219,16 +219,16 @@ bar {
 	mode dock
    
     colors {
-        statusline   #78da59
+        statusline   #a9b1d6
         #statusline #62AEEE 
         #background #585858
-        background #332f2e
+        background #1a1b26
 	#separator #ffff00
 	separator #fff32e
 				#border 	#bg		#txt
-        focused_workspace	#332f2e	#332f2e	#ffba08
+        focused_workspace	#9ece6a	#1a1b26	#a9b1d6
         #inactive_workspace	#332f2e	#585858	 #cde4e6
-        inactive_workspace	#332f2e	#332f2e	 #cde4e6
+        inactive_workspace	#1a1b26	#1a1b26	 #a9b1d6
 	active_workspace	#777F8B	#777F8B	#cde4e6
     	urgent_workspace	#DEDFE3	#DEDFE3	#767E8A   
 
@@ -239,6 +239,8 @@ bar {
 
 input "type:keyboard" {
     xkb_options caps:swayescape
+    xkb_layout us,se
+    xkb_options grp:win_space_toggle
 }
 
 include /etc/sway/config.d/*
