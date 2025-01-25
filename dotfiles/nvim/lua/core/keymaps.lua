@@ -37,6 +37,8 @@ local buffers = require("helpers.buffers")
 map("n", "<leader>db", buffers.delete_this, "Current buffer")
 map("n", "<leader>do", buffers.delete_others, "Other buffers")
 map("n", "<leader>da", buffers.delete_all, "All buffers")
+map("n", "<C-c>", ":bp|bd #<CR>", "Move the prev buffer and close buffer previously open")
+
 
 -- Navigate buffers
 map("n", "<S-l>", ":bnext<CR>")
