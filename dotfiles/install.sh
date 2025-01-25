@@ -26,11 +26,11 @@ rm -rf \
 
 ln -s "$DOTFILES/gitconfig" "$HOME/.gitconfig"
 ln -s "$DOTFILES/zsh/zshrc" "$HOME/.zshrc"
-ln -s "$DOTFILES/config/nvim" "$DOTCONFIG/nvim"
-ln -s "$DOTFILES/config/alacritty" "$DOTCONFIG/alacritty"
-ln -s "$DOTFILES/config/i3status" "$DOTCONFIG/i3status"
-ln -s "$DOTFILES/config/rofi" "$DOTCONFIG/rofi"
-ln -s "$DOTFILES/config/sway" "$DOTCONFIG/sway"
+ln -s "$DOTFILES/nvim" "$DOTCONFIG/nvim"
+ln -s "$DOTFILES/alacritty" "$DOTCONFIG/alacritty"
+ln -s "$DOTFILES/i3status" "$DOTCONFIG/i3status"
+ln -s "$DOTFILES/rofi" "$DOTCONFIG/rofi"
+ln -s "$DOTFILES/sway" "$DOTCONFIG/sway"
 
 cd "$HOME" || exit
 rm -f "${HOME}/.zcompdump*"
