@@ -23,12 +23,7 @@ return {
                   if context.buffer:current() then
                     return ''
                   end
-                  if level:match('error') then
-                    return ' ' .. vim.g.diagnostic_icons.Error
-                  elseif level:match('warning') then
-                    return ' ' .. vim.g.diagnostic_icons.Warning
-                  end
-                  return ''
+                  return ''
                 end,
                 custom_filter = function(buf_number, buf_numbers)
                   if vim.bo[buf_number].filetype ~= 'oil' then
