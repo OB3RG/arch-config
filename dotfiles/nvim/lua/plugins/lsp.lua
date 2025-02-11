@@ -10,7 +10,7 @@ return {
 				tag = "legacy",
 				event = "LspAttach",
 			},
-			"folke/neodev.nvim",
+			"folke/lazydev.nvim",
 			"RRethy/vim-illuminate",
 			"hrsh7th/cmp-nvim-lsp",
 		},
@@ -27,9 +27,6 @@ return {
 
 			-- Quick access via keymap
 			require("helpers.keys").map("n", "<leader>M", "<cmd>Mason<cr>", "Show Mason")
-
-			-- Neodev setup before LSP config
-			require("neodev").setup()
 
 			-- Turn on LSP status information
 			require("fidget").setup()
