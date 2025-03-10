@@ -1,29 +1,46 @@
-[alias]
-  co = checkout
-  cob = checkout -b
-
-  br = branch
-  brd = branch -d
-
-  c = commit -m
-
-  #oneline log
-  l = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short
-
-  s = status -s
-
-
 [format]
   pretty = "%H %ci %ce %ae %d %s"
 
 [user]
 	email = oskar@shimayama.io
 	name = Oskar Öberg
-[push]
-	default = simple
-[core]
-	editor = nvim
+
+[column]
+        ui = auto
+[branch]
+        sort = -committerdate
+[tag]
+        sort = version:refname
+[init]
+        defaultBranch = main
+[diff]
+        algorithm = histogram
+        colorMoved = plain
+        mnemonicPrefix = true
+        renames = true
 [pull]
 	rebase = true
-[init]
-	defaultBranch = main
+[push]
+        default = simple
+        autoSetupRemote = true
+        followTags = true
+[fetch]
+        prune = true
+        pruneTags = true
+        all = true
+
+[help]
+        autocorrect = prompt
+[commit]
+        verbose = true
+[rerere]
+        enabled = true
+        autoupdate = true
+[core]
+        excludesfile = ~/.gitignore
+        editor = nvim
+[rebase]
+        autoSquash = true
+        autoStash = true
+        updateRefs = true
+
