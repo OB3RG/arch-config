@@ -234,9 +234,8 @@ bar {
 }
 
 input "type:keyboard" {
-    xkb_options caps:swayescape
     xkb_layout us,se
-    xkb_options grp:win_space_toggle
+    xkb_options grp:win_space_toggle,caps:escape
 }
 
 include /etc/sway/config.d/*
