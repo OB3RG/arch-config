@@ -11,14 +11,21 @@ general {
 }
 
 order += "ethernet _first_"
+order += "wireless _first_"
 order += "disk /"
 order += "load"
 order += "memory"
 order += "tztime local"
+order += "battery 0"
 
 ethernet _first_ {
         format_up = "E: %ip (%speed)"
         format_down = "E: down"
+}
+
+wireless _first_ {
+        format_up = "W: (%quality at %essid, %bitrate) %ip"
+        format_down = "W: down"
 }
 
 disk "/" {
@@ -37,4 +44,16 @@ memory {
 
 tztime local {
         format = "%Y-%m-%d %H:%M:%S"
+}
+
+battery 0 {
+        format = "%status %percentage %remaining %emptytime"
+        format_down = "No battery"
+        status_chr = "⚡ CHR"
+        status_bat = "🔋 BAT"
+        status_unk = "? UNK"
+        status_full = "☻ FULL"
+        status_idle = "☻ IDLE"
+        path = "/sys/class/power_supply/BAT%d/uevent"
+        low_threshold = 10
 }
