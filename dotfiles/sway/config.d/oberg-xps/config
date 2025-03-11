@@ -1,0 +1,7 @@
+# Default config for sway
+
+exec_always $HOME/.config/sway/config.d/oberg-xps/clamshell.sh
+
+set $laptop eDP-1
+bindswitch --reload --locked lid:on output $laptop disable
+bindswitch --reload --locked lid:off output $laptop enable

@@ -238,4 +238,5 @@ input "type:keyboard" {
     xkb_options grp:win_space_toggle,caps:escape
 }
 
+include "$HOME/.config/sway/config.d/$(cat /etc/hostname)/config"
 include /etc/sway/config.d/*
