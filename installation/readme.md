@@ -25,5 +25,5 @@ A small summary:
 ## Post install 
 
 ### To enable gnome keyring
-1. systemctl --user enable gnome-keyring.service
+1. systemctl --user enable gnome-keyring-daemon.service
 2. systemctl --user enable gcr-ssh-agent.socket
