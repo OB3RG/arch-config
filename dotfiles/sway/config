@@ -4,6 +4,10 @@
 #
 # Read `man 5 sway` for a complete reference.
 
+### Includes
+include "$HOME/.config/sway/config.d/$(cat /etc/hostname)/*"
+include "$HOME/.config/sway/config.d/common/*"
+
 ### Variables
 #
 # Logo key. Use Mod1 for Alt.
@@ -219,14 +223,14 @@ bar {
 	mode dock
    
     colors {
-        statusline   #a9b1d6
-        background #1a1b2695
-	separator #fff32e
+        statusline   $light
+        background $bar_background
+	separator $focused
 				#border 	#bg		#txt
-        focused_workspace	#9ece6a	#1a1b26	#a9b1d6
-        inactive_workspace	#1a1b26	#1a1b26	 #a9b1d6
-	active_workspace	#777F8B	#777F8B	#cde4e6
-    	urgent_workspace	#DEDFE3	#DEDFE3	#767E8A   
+        focused_workspace	$focused	$focused	$light
+        inactive_workspace	$inactive       $inactive       $light
+	active_workspace	$unfocused	$unfocused      $light 
+    	urgent_workspace	$urgent         $urgent         $light
 
 
 
@@ -238,5 +242,4 @@ input "type:keyboard" {
     xkb_options grp:win_space_toggle,caps:escape
 }
 
-include "$HOME/.config/sway/config.d/$(cat /etc/hostname)/config"
-include /etc/sway/config.d/*
+

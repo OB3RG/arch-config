@@ -1,21 +1,31 @@
 /*
- * Tokyonight colorscheme (big icons) for rofi
- * User: w8ste
+ * Gruvbox colorscheme (big icons) for rofi
+ * User: Ob3rg
  */
 
 
 // define colors etc.
 * {
-    bg: #24283b;
-    hv: #9274ca; 
-    primary: #C5C8C6; 
-    ug: #0B2447;
-    font: "Monospace 11";
+    gruvbox-dark-bg0-soft:     #32302f;
+    gruvbox-dark-bg1:          #3c3836;
+    gruvbox-dark-bg3:          #665c54;
+    gruvbox-dark-fg0:          #fbf1c7;
+    gruvbox-dark-fg1:          #ebdbb2;
+    gruvbox-dark-red-dark:     #cc241d;
+    gruvbox-dark-red-light:    #fb4934;
+    gruvbox-dark-yellow-dark:  #d79921;
+    gruvbox-dark-yellow-light: #fabd2f;
+    gruvbox-dark-gray:         #a89984;
+
+    
+    bg: @gruvbox-dark-bg0-soft;
+    hv: @gruvbox-dark-fg1; 
+    primary: @gruvbox-dark-gray; 
+    font: "OpenDyslexicNerdFont 9";
     background-color: @bg;
-    //dark: @bg;
     border: 0px;
-    kl: #7aa2f7;
-    black: #000000;
+    kl: @gruvbox-dark-yellow-dark;
+    black: @gruvbox-dark-bg0-soft;
 
     transparent: rgba(46,52,64,0);
 }

@@ -10,4 +10,5 @@ history = 5000
 multiplier = 3
 
 [general]
-import = ["./tokyo-night.toml"]
+#import = ["./tokyo-night.toml"]
+import = ["./gruvbox.toml"]

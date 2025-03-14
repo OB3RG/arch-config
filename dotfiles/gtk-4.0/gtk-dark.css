@@ -1,22 +1,3 @@
-/* .solid-csd { */
-/* 	border: 1px solid rgb(150,150,150); */
-/* 	border-radius: 0; */
-/* 	box-shadow: none; */
-/* } */
-/**/
-/* popover contents { */
-/* 	border: 1px solid rgb(150,150,150); */
-/* 	border-radius: 0; */
-/* 	box-shadow: none; */
-/* 	margin-top: -12px; */
-/* }   */
-/**/
-/* popover arrow { */
-/* 	background: transparent; */
-/* 	border-color: transparent; */
-/* } */
-
-
 @keyframes ripple {
   to {
     background-size: 1000% 1000%;
