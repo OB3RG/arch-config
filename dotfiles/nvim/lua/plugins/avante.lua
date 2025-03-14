@@ -8,17 +8,11 @@ return {
       -- add any opts here
       -- for example
       provider = "ollama",
-      auto_suggestions_provider = "ollama",
-      vendors = {
-        ---@type AvanteProvider
-        ---@diagnostic disable-next-line: missing-fields
-        ollama = {
-          __inherited_from = "openai",
-          api_key_name = "",
-          endpoint = "10.25.0.11:11434/v1",
-          model = "granite-code"
-        },
+      ollama = {
+        endpoint = "10.25.0.11:11434/v1",
+        model = "granite-code"
       },
+      auto_suggestions_provider = "ollama",
     },
     -- if you want to build from source then do `make BUILD_FROM_SOURCE=true`
     build = "make",
